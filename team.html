@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Team - JrdBuilders</title>
+    <meta name="description" content="Meet the talented team behind JrdBuilders' success. Our experienced professionals are dedicated to excellence in construction.">
+    
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="assets/circular_logo.jpeg" type="image/x-icon" style="border-radius: 50%;">
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/team.css">
+    <link rel="stylesheet" href="css/cursor.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/footer-override.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- GSAP Animation (CDN) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js" defer></script>
+</head>
+<body>
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="loader">
+            <div class="loader-inner"></div>
+        </div>
+    </div>
+    
+    <!-- Custom Cursor -->
+    <div class="custom-cursor">
+        <img src="assets/jcb-cursor.png" alt="JCB Cursor" id="cursor-img">
+        <div class="cursor-particles"></div>
+    </div>
+    
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="assets/logo.jpeg" alt="JrdBuilders Logo">
+                </a>
+                <h1>JrdBuilders</h1>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="ongoing-projects.html">Ongoing Projects</a></li>
+                    <li><a href="team.html" class="active">Our Team</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <div class="theme-toggle">
+                    <i class="fas fa-sun"></i>
+                    <i class="fas fa-moon"></i>
+                </div>
+                <div class="menu-btn">
+                    <div class="menu-btn__burger"></div>
+                </div>
+            </nav>
+        </div>
+    </header>
+    
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <ul class="mobile-nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="ongoing-projects.html">Ongoing Projects</a></li>
+            <li><a href="team.html" class="active">Our Team</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+    
+    <main>
+        <!-- Hero Section -->
+        <section class="team-hero">
+            <div class="hero-parallax"></div>
+            <div class="hero-content">
+                <h1 class="hero-title">Meet Our Exceptional Team</h1>
+                <p class="hero-subtitle">Our talented professionals combine expertise, creativity, and dedication to deliver extraordinary construction projects. With diverse backgrounds and specialized skills, we're united by our commitment to excellence.</p>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <div class="stat-value">25</div>
+                        <div class="stat-label">Years of Experience</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value">75</div>
+                        <div class="stat-label">Team Members</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value">30</div>
+                        <div class="stat-label">Industry Awards</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Leadership Section -->
+        <section class="leadership-section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Leadership</span>
+                    <h2>Company Leadership</h2>
+                    <p>Our company is led by industry veterans with decades of combined experience and a shared vision for excellence in construction and development.</p>
+                </div>
+                
+                <div class="leadership-grid">
+                    <!-- Leadership Card 1 -->
+                    <div class="leader-card">
+                        <div class="leader-image">
+                            <img src="assets/business-colleagues-talking-discussing-project-during-business-meeting-modern-office_155003-10905.webp" alt="John Smith">
+                            <div class="leader-social">
+                                <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                                <a href="#" class="social-icon"><i class="fas fa-envelope"></i></a>
+                            </div>
+                        </div>
+                        <div class="leader-content">
+                            <div>
+                                <h3 class="leader-name">John Smith</h3>
+                                <div class="leader-position">Chief Executive Officer</div>
+                                <p class="leader-bio">John brings over 20 years of industry experience with a focus on sustainable construction methods and innovative project management.</p>
+                            </div>
+                            <div class="leader-contact">
+                                <a href="#" class="contact-link">Contact</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Leadership Card 2 -->
+                    <div class="leader-card">
+                        <div class="leader-image">
+                            <img src="assets/female-working-environment-projects_23-2148829296.webp" alt="Sarah Johnson">
+                            <div class="leader-social">
+                                <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                                <a href="#" class="social-icon"><i class="fas fa-envelope"></i></a>
+                            </div>
+                        </div>
+                        <div class="leader-content">
+                            <div>
+                                <h3 class="leader-name">Sarah Johnson</h3>
+                                <div class="leader-position">Chief Operations Officer</div>
+                                <p class="leader-bio">Sarah oversees daily operations with expertise in optimizing processes, enhancing efficiency, and ensuring project timelines are met.</p>
+                            </div>
+                            <div class="leader-contact">
+                                <a href="#" class="contact-link">Contact</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Leadership Card 3 -->
+                    <div class="leader-card">
+                        <div class="leader-image">
+                            <img src="assets/people-working-team_23-2148204937.webp" alt="Michael Chen">
+                            <div class="leader-social">
+                                <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                                <a href="#" class="social-icon"><i class="fas fa-envelope"></i></a>
+                            </div>
+                        </div>
+                        <div class="leader-content">
+                            <div>
+                                <h3 class="leader-name">Michael Chen</h3>
+                                <div class="leader-position">Chief Technology Officer</div>
+                                <p class="leader-bio">Michael leads our technological initiatives, implementing cutting-edge solutions that enhance our construction methods and client experience.</p>
+                            </div>
+                            <div class="leader-contact">
+                                <a href="#" class="contact-link">Contact</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="leader-more">
+                    <a href="#" class="btn-primary">View Full Leadership Team</a>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Team Departments Section -->
+        <section class="departments-section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Our Departments</span>
+                    <h2>Meet Our Specialized Teams</h2>
+                    <p>Our company is organized into specialized departments, each contributing unique expertise to deliver exceptional results for our clients.</p>
+                </div>
+                
+                <div class="department-tabs">
+                    <div class="department-tab active" data-department="architecture">Architecture</div>
+                    <div class="department-tab" data-department="engineering">Engineering</div>
+                    <div class="department-tab" data-department="construction">Construction</div>
+                    <div class="department-tab" data-department="project-management">Project Management</div>
+                    <div class="department-tab" data-department="administration">Administration</div>
+                </div>
+                
+                <!-- Architecture Department -->
+                <div class="department-content active" id="architecture-team">
+                    <div class="team-grid">
+                        <div class="team-member">
+                            <div class="member-avatar">
+                                <img src="assets/people-working-team_23-2148204937.webp" alt="David Williams">
+                            </div>
+                            <h3 class="member-name">David Williams</h3>
+                            <div class="member-position">Head Architect</div>
+                            <div class="member-contact">
+                                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fas fa-envelope"></i></a>
+                            </div>
+                        </div>
+                        
+                        <div class="team-member">
+                            <div class="member-avatar">
+                                <img src="assets/female-working-environment-projects_23-2148829296.webp" alt="Jessica Lee">
+                            </div>
+                            <h3 class="member-name">Jessica Lee</h3>
+                            <div class="member-position">Senior Architect</div>
+                            <div class="member-contact">
+                                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fas fa-envelope"></i></a>
+                            </div>
+                        </div>
+                        
+                        <div class="team-member">
+                            <div class="member-avatar">
+                                <img src="assets/man-using-digital-tablet-with-augmented-reality-futuristic-city-skyline_1134-224.webp" alt="Robert Garcia">
+                            </div>
+                            <h3 class="member-name">Robert Garcia</h3>
+                            <div class="member-position">Design Architect</div>
+                            <div class="member-contact">
+                                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fas fa-envelope"></i></a>
+                            </div>
+                        </div>
+                        
+                        <div class="team-member">
+                            <div class="member-avatar">
+                                <img src="assets/architecture-discussing-construction-project-idea-architectural-firms-building-design-office-construction-planning-office-concept-architects-discussing-blueprints-designs-ideas-building-projects_613910-22322.webp" alt="Emily Chen">
+                            </div>
+                            <h3 class="member-name">Emily Chen</h3>
+                            <div class="member-position">Junior Architect</div>
+                            <div class="member-contact">
+                                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fas fa-envelope"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Engineering Department -->
+                <div class="department-content" id="engineering-team">
+                    <div class="team-grid">
+                        <div class="team-member">
+                            <div class="member-avatar">
+                                <img src="assets/people-working-team_23-2148204937.webp" alt="Thomas Brown">
+                            </div>
+                            <h3 class="member-name">Thomas Brown</h3>
+                            <div class="member-position">Chief Engineer</div>
+                            <div class="member-contact">
+                                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fas fa-envelope"></i></a>
+                            </div>
+                        </div>
+                        
+                        <div class="team-member">
+                            <div class="member-avatar">
+                                <img src="assets/female-working-environment-projects_23-2148829296.webp" alt="Sophia Martinez">
+                            </div>
+                            <h3 class="member-name">Sophia Martinez</h3>
+                            <div class="member-position">Structural Engineer</div>
+                            <div class="member-contact">
+                                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fas fa-envelope"></i></a>
+                            </div>
+                        </div>
+                        
+                        <div class="team-member">
+                            <div class="member-avatar">
+                                <img src="assets/discussing-building-plan_1098-16479.webp" alt="James Wilson">
+                            </div>
+                            <h3 class="member-name">James Wilson</h3>
+                            <div class="member-position">Civil Engineer</div>
+                            <div class="member-contact">
+                                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fas fa-envelope"></i></a>
+                            </div>
+                        </div>
+                        
+                        <div class="team-member">
+                            <div class="member-avatar">
+                                <img src="assets/man-using-digital-tablet-with-augmented-reality-futuristic-city-skyline_1134-224.webp" alt="Oliver Kim">
+                            </div>
+                            <h3 class="member-name">Oliver Kim</h3>
+                            <div class="member-position">Mechanical Engineer</div>
+                            <div class="member-contact">
+                                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fas fa-envelope"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Other departments would follow the same pattern -->
+                
+            </div>
+        </section>
+        
+        <!-- Team Culture Section -->
+        <section class="culture-section">
+            <div class="container">
+                <div class="culture-container">
+                    <div class="culture-content">
+                        <h2 class="culture-title">Our Work Culture</h2>
+                        <p class="culture-text">At JrdBuilders, we foster a collaborative, innovative, and inclusive environment. Our culture is built on mutual respect, continuous learning, and a shared passion for excellence in construction.</p>
+                        
+                        <ul class="culture-values">
+                            <li>
+                                <i class="fas fa-handshake"></i>
+                                <span>Collaboration and teamwork across all departments</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-lightbulb"></i>
+                                <span>Innovation in construction methods and solutions</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-medal"></i>
+                                <span>Excellence in every project, no matter the scale</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-heart"></i>
+                                <span>Passion for creating spaces that transform lives</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-user-check"></i>
+                                <span>Integrity and transparency in all our dealings</span>
+                            </li>
+                        </ul>
+                        
+                        <a href="#" class="btn-primary">Learn More About Us</a>
+                    </div>
+                    
+                    <div class="culture-gallery">
+                        <div class="gallery-item">
+                            <img src="assets/civil-engineer-construction-worker-architects-wearing-hardhats-safety-vests-are-working-together-construction-site-building-home-cooperation-teamwork-concept_640221-172.webp" alt="Team at Construction Site">
+                            <div class="gallery-caption">Our team collaborating at a construction site</div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="assets/construction-workers-working-development-construction-site_136354-8772.jpg" alt="Team Meeting">
+                            <div class="gallery-caption">Weekly team strategy meeting</div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="assets/high-angle-house-project-table_23-2148346293.webp" alt="Design Workshop">
+                            <div class="gallery-caption">Design thinking workshop</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-modern">
+                <div class="footer-branding">
+                    <img src="assets/logo.jpeg" alt="JrdBuilders Logo">
+                    <h3>JrdBuilders</h3>
+                    <p>Building dreams into reality since 2010. Excellence in construction is our passion.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-nav">
+                    <div class="footer-nav-column">
+                        <h4>Quick Links</h4>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="projects.html">Projects</a></li>
+                            <li><a href="ongoing-projects.html">Ongoing Projects</a></li>
+                            <li><a href="team.html">Our Team</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-nav-column">
+                        <h4>Services</h4>
+                        <ul>
+                            <li>Residential Construction</li>
+                            <li>Commercial Buildings</li>
+                            <li>Renovations & Remodels</li>
+                            <li>Architectural Design</li>
+                            <li>Project Management</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-nav-column">
+                        <h4>Contact Info</h4>
+                        <ul class="contact-details">
+                            <li><i class="fas fa-map-marker-alt"></i> Hanuman Nagar Nai Basti, Satna, MP</li>
+                            <li><i class="fas fa-phone"></i> +91 8103249331</li>
+                            <li><i class="fas fa-envelope"></i>saurabhkushwaha9853@gmail.com</li>
+                            <li><i class="fas fa-clock"></i> Mon-Fri: 8:00 AM - 10:00 PM</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2023 JrdBuilders. All Rights Reserved.</p>
+                <div class="legal-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Back to Top Button -->
+    <div class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+    
+    <!-- JS Files -->
+    <script src="js/main.js"></script>
+    <script src="js/cursor.js"></script>
+    <script src="js/team.js"></script>
+</body>
+</html> 

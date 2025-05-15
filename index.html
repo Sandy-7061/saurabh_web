@@ -1,0 +1,914 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JrdBuilders - Building Dreams into Reality</title>
+    <meta name="description" content="JrdBuilders - Premium construction and building services for residential and commercial projects">
+    
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="assets/circular_logo.jpeg" type="image/x-icon">
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/cursor.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/footer-override.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="loading">
+    <!-- Custom Cursor -->
+    <div class="custom-cursor visible">
+        <img src="assets/jcb-cursor.png" alt="JCB Cursor" id="cursor-img">
+        <div class="cursor-follower"></div>
+        <div class="cursor-dot"></div>
+        <div class="cursor-particles"></div>
+    </div>
+    
+    <!-- Loading Screen -->
+    <div class="loading-screen">
+        <div class="loading-content">
+            <img src="assets/logo.jpeg" alt="JrdBuilders Logo" class="loading-logo">
+            <div class="loading-progress">
+                <div class="loading-bar"></div>
+            </div>
+            <div class="loading-text">Building Your Experience...</div>
+            <div id="loading-3d-container"></div>
+        </div>
+    </div>
+    
+    <!-- Header and Navigation -->
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="assets/logo.jpeg" alt="JrdBuilders Logo">
+                </a>
+                <h1>JrdBuilders</h1>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="ongoing-projects.html">Ongoing Projects</a></li>
+                    <li><a href="team.html">Our Team</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <div class="theme-toggle">
+                    <i class="fas fa-sun"></i>
+                    <i class="fas fa-moon"></i>
+                </div>
+                <div class="mobile-menu-icon">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
+            </nav>
+        </div>
+    </header>
+    
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <ul>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="ongoing-projects.html">Ongoing Projects</a></li>
+            <li><a href="team.html">Our Team</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+    
+    <!-- Hero Section with 3D Canvas -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="animated-text">Building Your Dreams with JrdBuilders</h1>
+            <p>Excellence in construction since 2010, bringing your visions to life with precision and passion.</p>
+            <div class="hero-buttons">
+                <a href="projects.html" class="btn btn-primary">Explore Projects</a>
+                <a href="contact.html" class="btn btn-secondary">Contact Us</a>
+            </div>
+        </div>
+        <div id="hero-3d-container" class="hero-3d"></div>
+    </section>
+    
+    <!-- About Section -->
+    <section class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2>Who We Are</h2>
+                <div class="tagline-rotator">
+                    <div class="tagline active">Crafting Excellence in Every Structure</div>
+                    <div class="tagline">Your Vision, Our Mission</div>
+                    <div class="tagline">Building Landmarks That Last</div>
+                </div>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>JrdBuilders is a premier construction company specializing in residential and commercial projects. With over a decade of experience, we've established ourselves as industry leaders committed to quality, innovation, and client satisfaction.</p>
+                    <p>Our team of skilled architects, engineers, and construction professionals work together to transform your ideas into stunning realities that stand the test of time.</p>
+                    <a href="team.html" class="btn btn-outline">Meet Our Team</a>
+                </div>
+                <div class="about-image">
+                    <img src="assets/civil-engineer-construction-worker-architects-wearing-hardhats-safety-vests-are-working-together-construction-site-building-home-cooperation-teamwork-concept_640221-172.webp" alt="JrdBuilders Team" class="shimmer-effect">
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Services Section -->
+    <section class="services">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Services</h2>
+                <p>Comprehensive construction solutions tailored to your needs</p>
+            </div>
+            
+            <div class="services-showcase">
+                <div class="service-main">
+                    <div class="service-main-image">
+                        <img src="assets/Main_Image.jpeg" alt="JrdBuilders Construction Site" class="main-service-img">
+                        <div class="image-overlay">
+                            <div class="overlay-content">
+                                <h3>Building Dreams</h3>
+                                <p>From concept to completion, we bring your vision to life</p>
+                                <a href="contact.html" class="btn btn-outline-light">Get a Quote</a>
+                            </div>
+                        </div>
+                        <!-- Interactive elements -->
+                        <div class="construction-elements">
+                            <div class="crane-element"></div>
+                            <div class="worker-element"></div>
+                            <div class="blueprint-element"></div>
+                        </div>
+                    </div>
+                    <div class="service-main-content">
+                        <h3>Expert Construction Services</h3>
+                        <p>At JrdBuilders, we provide end-to-end construction solutions with uncompromising quality and attention to detail. Our team of skilled professionals ensures your project is completed on time, within budget, and exceeds your expectations.</p>
+                        <div class="service-highlights">
+                            <div class="highlight-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Professional Team</span>
+                            </div>
+                            <div class="highlight-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Quality Materials</span>
+                            </div>
+                            <div class="highlight-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>On-time Delivery</span>
+                            </div>
+                            <div class="highlight-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Budget Adherence</span>
+                            </div>
+                        </div>
+                        <a href="projects.html" class="btn btn-primary">View Our Work</a>
+                    </div>
+                </div>
+                
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-home"></i>
+                        </div>
+                        <div class="service-content">
+                            <h3>Residential Construction</h3>
+                            <p>Custom homes, villas, apartments, and renovations tailored to your lifestyle and preferences.</p>
+                            <ul class="service-features">
+                                <li>Custom Home Building</li>
+                                <li>Home Renovations</li>
+                                <li>Extensions & Additions</li>
+                                <li>Interior Finishing</li>
+                            </ul>
+                            <a href="contact.html" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-building"></i>
+                        </div>
+                        <div class="service-content">
+                            <h3>Commercial Construction</h3>
+                            <p>Office buildings, retail spaces, hotels, and industrial facilities designed for functionality and impact.</p>
+                            <ul class="service-features">
+                                <li>Office Complexes</li>
+                                <li>Retail Centers</li>
+                                <li>Hospitality Buildings</li>
+                                <li>Industrial Facilities</li>
+                            </ul>
+                            <a href="contact.html" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-pencil-ruler"></i>
+                        </div>
+                        <div class="service-content">
+                            <h3>Architectural Design</h3>
+                            <p>Innovative and practical designs that blend aesthetics with structural integrity and functionality.</p>
+                            <ul class="service-features">
+                                <li>Concept Development</li>
+                                <li>3D Visualization</li>
+                                <li>Blueprint Creation</li>
+                                <li>Sustainable Design</li>
+                            </ul>
+                            <a href="contact.html" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-hard-hat"></i>
+                        </div>
+                        <div class="service-content">
+                            <h3>Project Management</h3>
+                            <p>Efficient oversight ensuring your project is completed on time, within budget, and to specification.</p>
+                            <ul class="service-features">
+                                <li>Timeline Planning</li>
+                                <li>Resource Management</li>
+                                <li>Quality Control</li>
+                                <li>Progress Reporting</li>
+                            </ul>
+                            <a href="contact.html" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-tools"></i>
+                        </div>
+                        <div class="service-content">
+                            <h3>Renovations & Remodeling</h3>
+                            <p>Transform existing spaces with expert renovations that add value and enhance functionality.</p>
+                            <ul class="service-features">
+                                <li>Kitchen Remodeling</li>
+                                <li>Bathroom Renovations</li>
+                                <li>Office Renovations</li>
+                                <li>Historic Restorations</li>
+                            </ul>
+                            <a href="contact.html" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-leaf"></i>
+                        </div>
+                        <div class="service-content">
+                            <h3>Sustainable Building</h3>
+                            <p>Eco-friendly construction practices and materials for environmentally conscious projects.</p>
+                            <ul class="service-features">
+                                <li>Green Certification</li>
+                                <li>Energy Efficiency</li>
+                                <li>Sustainable Materials</li>
+                                <li>Solar Integration</li>
+                            </ul>
+                            <a href="contact.html" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Service Categories Section -->
+    <section class="service-categories">
+        <div class="container">
+            <div class="categories-header">
+                <h2>Service Categories</h2>
+                <p>Explore our specialized construction services tailored to meet your specific project needs</p>
+            </div>
+            
+            <div class="categories-wrapper">
+                <div class="category-box">
+                    <div class="category-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h3>Residential Construction</h3>
+                    <ul class="category-features">
+                        <li>Custom Home Building</li>
+                        <li>Luxury Villas & Apartments</li>
+                        <li>Home Renovations</li>
+                        <li>Extensions & Additions</li>
+                    </ul>
+                    <p>Creating dream homes with attention to detail and customized to your lifestyle needs.</p>
+                </div>
+                
+                <div class="category-box">
+                    <div class="category-icon">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <h3>Commercial Construction</h3>
+                    <ul class="category-features">
+                        <li>Office Buildings</li>
+                        <li>Retail Centers</li>
+                        <li>Hotels & Hospitality</li>
+                        <li>Educational Facilities</li>
+                    </ul>
+                    <p>Building impressive commercial spaces designed for functionality, brand identity, and customer experience.</p>
+                </div>
+                
+                <div class="category-box">
+                    <div class="category-icon">
+                        <i class="fas fa-industry"></i>
+                    </div>
+                    <h3>Industrial Construction</h3>
+                    <ul class="category-features">
+                        <li>Manufacturing Plants</li>
+                        <li>Warehouses & Distribution</li>
+                        <li>Tech & Data Centers</li>
+                        <li>Logistics Facilities</li>
+                    </ul>
+                    <p>Developing robust industrial facilities with efficiency, safety, and technological integration.</p>
+                </div>
+                
+                <div class="category-box">
+                    <div class="category-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3>Specialized Services</h3>
+                    <ul class="category-features">
+                        <li>Architectural Design</li>
+                        <li>Project Management</li>
+                        <li>Sustainable Building</li>
+                        <li>Historic Renovations</li>
+                    </ul>
+                    <p>Offering specialty construction services to address unique project requirements and challenges.</p>
+                </div>
+            </div>
+            
+            <div class="categories-cta">
+                <p>Ready to start your construction project with us?</p>
+                <a href="contact.html" class="btn btn-primary">Request a Consultation</a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Featured Projects Section -->
+    <section class="featured-projects">
+        <div class="container">
+            <div class="section-header">
+                <h2>Featured Projects</h2>
+                <p>Showcasing our exceptional work and craftsmanship</p>
+            </div>
+            
+            <div class="featured-projects-grid">
+                <!-- Featured Project 1 -->
+                <div class="featured-project">
+                    <div class="project-card-3d">
+                        <div class="project-card-inner">
+                            <div class="project-card-front">
+                                <div class="project-image">
+                                    <img src="assets/modern-house-exterior-evening-view-with-lawn-grass3d-rendering_1216305-388.jpg" alt="Lakeside Villa" class="shimmer-effect">
+                                    <div class="project-overlay">
+                                        <div class="project-category">Residential</div>
+                                        <h3>Lakeside Villa</h3>
+                                        <div class="project-location">
+                                            <i class="fas fa-map-marker-alt"></i>
+                                            <span>Marina District</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="project-card-back">
+                                <div class="project-details">
+                                    <h3>Lakeside Villa</h3>
+                                    <div class="project-specs">
+                                        <div class="spec">
+                                            <i class="fas fa-ruler-combined"></i>
+                                            <span>8,500 sq ft</span>
+                                        </div>
+                                        <div class="spec">
+                                            <i class="fas fa-bed"></i>
+                                            <span>6 Bedrooms</span>
+                                        </div>
+                                        <div class="spec">
+                                            <i class="fas fa-calendar-check"></i>
+                                            <span>Completed 2024</span>
+                                        </div>
+                                    </div>
+                                    <p>A luxurious lakefront residence featuring contemporary design, sustainable materials, and panoramic water views. This project includes smart home technology, an infinity pool, and custom interior finishes.</p>
+                                    <a href="projects.html" class="btn btn-primary">View Details</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Featured Project 2 -->
+                <div class="featured-project">
+                    <div class="project-card-3d">
+                        <div class="project-card-inner">
+                            <div class="project-card-front">
+                                <div class="project-image">
+                                    <img src="assets/3d-rendering-individual-modern-house_21255-20.jpg" alt="Urban Heights" class="shimmer-effect">
+                                    <div class="project-overlay">
+                                        <div class="project-category">Commercial</div>
+                                        <h3>Urban Heights</h3>
+                                        <div class="project-location">
+                                            <i class="fas fa-map-marker-alt"></i>
+                                            <span>Downtown Metro</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="project-card-back">
+                                <div class="project-details">
+                                    <h3>Urban Heights</h3>
+                                    <div class="project-specs">
+                                        <div class="spec">
+                                            <i class="fas fa-building"></i>
+                                            <span>18 Floors</span>
+                                        </div>
+                                        <div class="spec">
+                                            <i class="fas fa-store"></i>
+                                            <span>35 Units</span>
+                                        </div>
+                                        <div class="spec">
+                                            <i class="fas fa-calendar-check"></i>
+                                            <span>Completed 2023</span>
+                                        </div>
+                                    </div>
+                                    <p>A mixed-use development with retail spaces, contemporary offices, and luxury apartments. This project features a glass curtain wall, energy-efficient systems, and a rooftop garden with city views.</p>
+                                    <a href="projects.html" class="btn btn-primary">View Details</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Featured Project 3 -->
+                <div class="featured-project">
+                    <div class="project-card-3d">
+                        <div class="project-card-inner">
+                            <div class="project-card-front">
+                                <div class="project-image">
+                                    <img src="assets/charming-yellow-house-with-wooden-windows-green-grassy-garden_181624-8074.webp" alt="Green Meadows" class="shimmer-effect">
+                                    <div class="project-overlay">
+                                        <div class="project-category">Residential</div>
+                                        <h3>Green Meadows</h3>
+                                        <div class="project-location">
+                                            <i class="fas fa-map-marker-alt"></i>
+                                            <span>Parkview Suburb</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="project-card-back">
+                                <div class="project-details">
+                                    <h3>Green Meadows</h3>
+                                    <div class="project-specs">
+                                        <div class="spec">
+                                            <i class="fas fa-home"></i>
+                                            <span>65 Homes</span>
+                                        </div>
+                                        <div class="spec">
+                                            <i class="fas fa-leaf"></i>
+                                            <span>Eco-Friendly</span>
+                                        </div>
+                                        <div class="spec">
+                                            <i class="fas fa-calendar-check"></i>
+                                            <span>Completed 2022</span>
+                                        </div>
+                                    </div>
+                                    <p>An eco-friendly residential community with sustainable features, solar panels, and extensive green spaces. This development includes a community center, walking trails, and energy-efficient homes.</p>
+                                    <a href="projects.html" class="btn btn-primary">View Details</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="featured-projects-gallery">
+                <div class="gallery-title">
+                    <h3>More of Our Work</h3>
+                    <div class="gallery-line"></div>
+                </div>
+                <div class="project-gallery">
+                    <div class="gallery-item">
+                        <img src="assets/interior-bed-room-kitchen-lobby-front-elevation-architecture-design_1022782-351.webp" alt="Modern Interiors">
+                        <div class="gallery-item-caption">Modern Interiors</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="assets/big-hotel-luangprabang-laos_1127771-3143.jpg" alt="Skyline Hotel">
+                        <div class="gallery-item-caption">Skyline Hotel</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="assets/construction-multi-storey-brick-house-drone-view_160152-537.webp" alt="Industrial Complex">
+                        <div class="gallery-item-caption">Industrial Complex</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="assets/3d-rendering-individual-modern-house_21255-27.webp" alt="Modern Residence">
+                        <div class="gallery-item-caption">Modern Residence</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="view-all-projects">
+                <a href="projects.html" class="btn btn-large">Explore All Projects</a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2>Client Testimonials</h2>
+                <p>What our valued clients have to say about our work</p>
+            </div>
+            
+            <div class="testimonials-wrapper">
+                <div class="testimonial-background">
+                    <div class="bg-shape shape-1"></div>
+                    <div class="bg-shape shape-2"></div>
+                    <div class="bg-shape shape-3"></div>
+                    <div class="quote-icon">
+                        <i class="fas fa-quote-right"></i>
+                    </div>
+                </div>
+                
+                <div class="testimonial-slider">
+                    <!-- Testimonial 1 -->
+                    <div class="testimonial-slide active">
+                        <div class="testimonial-card">
+                            <div class="client-photo">
+                                <img src="assets/client-1.jpg" alt="John & Sarah Thompson">
+                                <div class="client-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                            <div class="testimonial-content">
+                                <p>"JrdBuilders transformed our vision into a stunning reality. Their attention to detail and commitment to quality exceeded our expectations. The team was professional, responsive, and truly passionate about our project. We couldn't be happier with our new home!"</p>
+                                <div class="testimonial-author">
+                                    <h4>John & Sarah Thompson</h4>
+                                    <span class="project-name">Lakeside Villa Project</span>
+                                    <div class="testimonial-date">
+                                        <i class="far fa-calendar-alt"></i> Completed January 2024
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Testimonial 2 -->
+                    <div class="testimonial-slide">
+                        <div class="testimonial-card">
+                            <div class="client-photo">
+                                <img src="assets/client-2.jpg" alt="Michael Rodriguez">
+                                <div class="client-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                            <div class="testimonial-content">
+                                <p>"Working with JrdBuilders on our office complex was a seamless experience. Their team's professionalism, technical expertise, and ability to meet deadlines made them the perfect partner for our project. The attention to every detail and their innovative solutions to challenges truly set them apart from other construction companies we've worked with."</p>
+                                <div class="testimonial-author">
+                                    <h4>Michael Rodriguez</h4>
+                                    <span class="project-name">Urban Heights Commercial Center</span>
+                                    <div class="testimonial-date">
+                                        <i class="far fa-calendar-alt"></i> Completed October 2023
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Testimonial 3 -->
+                    <div class="testimonial-slide">
+                        <div class="testimonial-card">
+                            <div class="client-photo">
+                                <img src="assets/client-3.jpg" alt="Emily Chen">
+                                <div class="client-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </div>
+                            </div>
+                            <div class="testimonial-content">
+                                <p>"The quality of construction and attention to environmental sustainability in our community development project was outstanding. JrdBuilders is clearly committed to both excellence and innovation. From the initial design consultation to final walkthrough, their team demonstrated exceptional knowledge and customer service. We're already planning our next project with them."</p>
+                                <div class="testimonial-author">
+                                    <h4>Emily Chen</h4>
+                                    <span class="project-name">Green Meadows Development</span>
+                                    <div class="testimonial-date">
+                                        <i class="far fa-calendar-alt"></i> Completed May 2023
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Testimonial 4 -->
+                    <div class="testimonial-slide">
+                        <div class="testimonial-card">
+                            <div class="client-photo">
+                                <img src="assets/client-4.jpg" alt="Robert Williams">
+                                <div class="client-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                            <div class="testimonial-content">
+                                <p>"JrdBuilders renovated our historic building with exceptional care and craftsmanship. They beautifully balanced preserving the original character while integrating modern amenities. Their deep understanding of both traditional and contemporary construction techniques made them the perfect choice for our challenging project."</p>
+                                <div class="testimonial-author">
+                                    <h4>Robert Williams</h4>
+                                    <span class="project-name">Heritage Building Restoration</span>
+                                    <div class="testimonial-date">
+                                        <i class="far fa-calendar-alt"></i> Completed August 2023
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonials-navigation">
+                    <div class="testimonial-nav-wrapper">
+                        <button class="testimonial-nav-btn prev-btn">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <div class="testimonial-indicators">
+                            <span class="indicator active" data-index="0"></span>
+                            <span class="indicator" data-index="1"></span>
+                            <span class="indicator" data-index="2"></span>
+                            <span class="indicator" data-index="3"></span>
+                        </div>
+                        <button class="testimonial-nav-btn next-btn">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="testimonial-cta">
+                <a href="contact.html" class="btn btn-outline">Share Your Experience</a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Timeline Section -->
+    <section class="timeline">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Our Journey</span>
+                <h2>Building Excellence Since 2010</h2>
+                <p>Follow our path from a small local construction team to a leading builder with innovative approaches and award-winning projects.</p>
+            </div>
+            
+            <div class="journey-intro">
+                <div class="journey-image">
+                    <img src="assets/civil-engineer-construction-worker-architects-wearing-hardhats-safety-vests-are-working-together-construction-site-building-home-cooperation-teamwork-concept_640221-172.webp" alt="JrdBuilders Journey">
+                    <div class="journey-overlay">
+                        <div class="years-badge">15+ Years</div>
+                        <h3>Building Excellence Since 2010</h3>
+                    </div>
+                </div>
+                <div class="journey-content">
+                    <h3>Our Journey</h3>
+                    <p>Follow our path from a small local construction team to a leading builder with innovative approaches and award-winning projects. We've grown through dedication, expertise, and commitment to quality in every project we undertake.</p>
+                    <div class="journey-stats">
+                        <div class="stat-item">
+                            <div class="stat-number">250+</div>
+                            <div class="stat-label">Projects Completed</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">40+</div>
+                            <div class="stat-label">Industry Awards</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">120+</div>
+                            <div class="stat-label">Team Members</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">15+</div>
+                            <div class="stat-label">Years of Excellence</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="timeline-container">
+                <div class="timeline-item show" data-year="2010">
+                    <div class="timeline-dot">
+                        <div class="timeline-icon">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">February 2010</div>
+                        <div class="timeline-card">
+                            <h3>Company Founding</h3>
+                            <p>JrdBuilders was established with a vision to transform the construction industry through innovation and quality craftsmanship.</p>
+                            <div class="milestone-image">
+                                <img src="assets/discussing-building-plan_1098-16479.webp" alt="Company Founding">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="timeline-item right show" data-year="2013">
+                    <div class="timeline-dot">
+                        <div class="timeline-icon">
+                            <i class="fas fa-award"></i>
+                        </div>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">August 2013</div>
+                        <div class="timeline-card">
+                            <h3>First Major Award</h3>
+                            <p>Recognition came as our innovative approach to sustainable construction earned us our first industry award for excellence.</p>
+                            <div class="milestone-image">
+                                <img src="assets/3d-electric-car-building_23-2148972401.webp" alt="First Major Award">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="timeline-item show" data-year="2016">
+                    <div class="timeline-dot">
+                        <div class="timeline-icon">
+                            <i class="fas fa-building"></i>
+                        </div>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">May 2016</div>
+                        <div class="timeline-card">
+                            <h3>Expansion Phase</h3>
+                            <p>We expanded our operations to include commercial construction, adding experienced professionals and new capabilities.</p>
+                            <div class="milestone-image">
+                                <img src="assets/new-high-rise-houses-construction-cranes_257488-1909.jpg" alt="Expansion Phase">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="timeline-item right show" data-year="2019">
+                    <div class="timeline-dot">
+                        <div class="timeline-icon">
+                            <i class="fas fa-globe-americas"></i>
+                        </div>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">November 2019</div>
+                        <div class="timeline-card">
+                            <h3>International Projects</h3>
+                            <p>Our reputation for excellence led to our first international projects, marking a significant milestone in our growth.</p>
+                            <div class="milestone-image">
+                                <img src="assets/construction-urban-landscape-blue-sky_146377-590.webp" alt="International Projects">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="timeline-item show" data-year="2023">
+                    <div class="timeline-dot">
+                        <div class="timeline-icon">
+                            <i class="fas fa-leaf"></i>
+                        </div>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">July 2023</div>
+                        <div class="timeline-card">
+                            <h3>Sustainable Initiative</h3>
+                            <p>We launched our comprehensive sustainability program, committing to eco-friendly practices across all our projects.</p>
+                            <div class="milestone-image">
+                                <img src="assets/3d-rendering-individual-modern-house_21255-27.webp" alt="Sustainable Initiative">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="timeline-item right show" data-year="2025">
+                    <div class="timeline-dot">
+                        <div class="timeline-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">Present</div>
+                        <div class="timeline-card future-card">
+                            <h3>Looking Forward</h3>
+                            <p>Today, we continue to innovate and grow, with exciting new projects and innovations on the horizon.</p>
+                            <a href="contact.html" class="btn btn-primary">Join Our Journey</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Call to Action Section -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Build Your Dream?</h2>
+                <p>Contact us today for a consultation and bring your vision to life with JrdBuilders.</p>
+                <a href="contact.html" class="btn btn-large">Get Started</a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-modern">
+                <div class="footer-branding">
+                    <img src="assets/logo.jpeg" alt="JrdBuilders Logo">
+                    <h3>JrdBuilders</h3>
+                    <p>Building dreams into reality since 2010. Excellence in construction is our passion.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-nav">
+                    <div class="footer-nav-column">
+                        <h4>Quick Links</h4>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="projects.html">Projects</a></li>
+                            <li><a href="ongoing-projects.html">Ongoing Projects</a></li>
+                            <li><a href="team.html">Our Team</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-nav-column">
+                        <h4>Services</h4>
+                        <ul>
+                            <li>Residential Construction</li>
+                            <li>Commercial Buildings</li>
+                            <li>Renovations & Remodels</li>
+                            <li>Architectural Design</li>
+                            <li>Project Management</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-nav-column">
+                        <h4>Contact Info</h4>
+                        <ul class="contact-details">
+                            <li><i class="fas fa-map-marker-alt"></i> Hanuman Nagar Nai Basti, Satna, MP</li>
+                            <li><i class="fas fa-phone"></i> +91 8103249331</li>
+                            <li><i class="fas fa-envelope"></i>saurabhkushwaha9853@gmail.com</li>
+                            <li><i class="fas fa-clock"></i> Mon-Fri: 8:00 AM - 10:00 PM</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2023 JrdBuilders. All Rights Reserved.</p>
+                <div class="legal-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+    
+    <!-- External JS Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    
+    <!-- Custom JS Files -->
+    <script src="js/main.js"></script>
+    <script src="js/cursor.js"></script>
+    <script src="js/home.js"></script>
+    <script src="js/three-scene.js"></script>
+    <script src="js/animations.js"></script>
+</body>
+</html> 

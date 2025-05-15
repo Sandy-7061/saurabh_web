@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - JrdBuilders</title>
+    <meta name="description" content="Access the JrdBuilders admin portal. Login for clients and staff.">
+    
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="assets/logo.jpeg" type="image/x-icon">
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/cursor.css">
+    <link rel="stylesheet" href="css/animations.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Custom Cursor -->
+    <div class="custom-cursor">
+        <img src="assets/jcb-cursor.png" alt="JCB Cursor" id="cursor-img">
+        <div class="cursor-particles"></div>
+    </div>
+    
+    <!-- Header and Navigation -->
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="assets/logo.jpeg" alt="JrdBuilders Logo">
+                </a>
+                <h1>JrdBuilders</h1>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="ongoing-projects.html">Ongoing Projects</a></li>
+                    <li><a href="team.html">Our Team</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="login.html" class="login-btn active">Login</a></li>
+                </ul>
+                <div class="theme-toggle">
+                    <i class="fas fa-sun"></i>
+                    <i class="fas fa-moon"></i>
+                </div>
+                <div class="mobile-menu-icon">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
+            </nav>
+        </div>
+    </header>
+    
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="ongoing-projects.html">Ongoing Projects</a></li>
+            <li><a href="team.html">Our Team</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="login.html" class="active">Login</a></li>
+        </ul>
+    </div>
+    
+    <!-- Login Section with 3D Background -->
+    <section class="login-section">
+        <div class="login-3d-container" id="login-3d-scene">
+            <!-- 3D scene will be rendered here using Three.js -->
+        </div>
+        <div class="login-container">
+            <div class="login-header">
+                <h1>Welcome Back</h1>
+                <p>Login to access your JrdBuilders account</p>
+            </div>
+            <form id="loginForm" class="login-form">
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <div class="input-icon-wrapper">
+                        <i class="fas fa-envelope"></i>
+                        <input type="email" id="email" name="email" placeholder="Enter your email" required class="form-input shimmer-effect">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <div class="input-icon-wrapper">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" id="password" name="password" placeholder="Enter your password" required class="form-input shimmer-effect">
+                        <button type="button" class="toggle-password">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="form-options">
+                    <div class="remember-me">
+                        <input type="checkbox" id="remember" name="remember">
+                        <label for="remember">Remember me</label>
+                    </div>
+                    <a href="#" class="forgot-password" id="forgotPasswordLink">Forgot Password?</a>
+                </div>
+                <button type="submit" class="btn btn-primary login-btn">
+                    <span>Login</span>
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+                <div class="login-divider">
+                    <span>or</span>
+                </div>
+                <div class="social-login">
+                    <button type="button" class="btn btn-social google">
+                        <i class="fab fa-google"></i>
+                        <span>Continue with Google</span>
+                    </button>
+                    <button type="button" class="btn btn-social microsoft">
+                        <i class="fab fa-microsoft"></i>
+                        <span>Continue with Microsoft</span>
+                    </button>
+                </div>
+                <div class="create-account">
+                    <p>Don't have an account? <a href="#" id="signupLink">Sign Up</a></p>
+                </div>
+            </form>
+            <div class="login-message success" id="loginSuccess">
+                <i class="fas fa-check-circle"></i>
+                <p>Login successful! Redirecting to dashboard...</p>
+            </div>
+            <div class="login-message error" id="loginError">
+                <i class="fas fa-exclamation-circle"></i>
+                <p>Invalid email or password. Please try again.</p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Forgot Password Modal -->
+    <div class="modal" id="forgotPasswordModal">
+        <div class="modal-overlay"></div>
+        <div class="modal-container">
+            <button class="modal-close"><i class="fas fa-times"></i></button>
+            <div class="modal-header">
+                <h3>Forgot Password</h3>
+                <p>Enter your email address and we'll send you a link to reset your password.</p>
+            </div>
+            <form id="forgotPasswordForm" class="modal-form">
+                <div class="form-group">
+                    <label for="resetEmail">Email</label>
+                    <div class="input-icon-wrapper">
+                        <i class="fas fa-envelope"></i>
+                        <input type="email" id="resetEmail" name="resetEmail" placeholder="Enter your email" required class="form-input shimmer-effect">
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary">Send Reset Link</button>
+            </form>
+            <div class="modal-message success" id="resetSuccess">
+                <i class="fas fa-check-circle"></i>
+                <p>Password reset link sent! Please check your email.</p>
+            </div>
+            <div class="modal-message error" id="resetError">
+                <i class="fas fa-exclamation-circle"></i>
+                <p>Error sending reset link. Please try again.</p>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Sign Up Modal -->
+    <div class="modal" id="signupModal">
+        <div class="modal-overlay"></div>
+        <div class="modal-container">
+            <button class="modal-close"><i class="fas fa-times"></i></button>
+            <div class="modal-header">
+                <h3>Create Account</h3>
+                <p>Join JrdBuilders to access exclusive client features.</p>
+            </div>
+            <form id="signupForm" class="modal-form">
+                <div class="form-group">
+                    <label for="fullName">Full Name</label>
+                    <div class="input-icon-wrapper">
+                        <i class="fas fa-user"></i>
+                        <input type="text" id="fullName" name="fullName" placeholder="Enter your full name" required class="form-input shimmer-effect">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="signupEmail">Email</label>
+                    <div class="input-icon-wrapper">
+                        <i class="fas fa-envelope"></i>
+                        <input type="email" id="signupEmail" name="signupEmail" placeholder="Enter your email" required class="form-input shimmer-effect">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="signupPassword">Password</label>
+                    <div class="input-icon-wrapper">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" id="signupPassword" name="signupPassword" placeholder="Create a password" required class="form-input shimmer-effect">
+                        <button type="button" class="toggle-password">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="confirmPassword">Confirm Password</label>
+                    <div class="input-icon-wrapper">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm your password" required class="form-input shimmer-effect">
+                    </div>
+                </div>
+                <div class="form-options">
+                    <div class="terms-agree">
+                        <input type="checkbox" id="terms" name="terms" required>
+                        <label for="terms">I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a></label>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary">Create Account</button>
+            </form>
+            <div class="modal-message success" id="signupSuccess">
+                <i class="fas fa-check-circle"></i>
+                <p>Account created successfully! You can now log in.</p>
+            </div>
+            <div class="modal-message error" id="signupError">
+                <i class="fas fa-exclamation-circle"></i>
+                <p>Error creating account. Please try again.</p>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Footer -->
+    <footer class="login-footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <div class="copyright">
+                    <p>&copy; 2025 JrdBuilders. All Rights Reserved.</p>
+                </div>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Help</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- External JS Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    
+    <!-- Custom JS Files -->
+    <script src="js/main.js"></script>
+    <script src="js/cursor.js"></script>
+    <script src="js/login.js"></script>
+    <script src="js/three-scene.js"></script>
+    <script src="js/animations.js"></script>
+</body>
+</html> 

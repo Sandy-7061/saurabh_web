@@ -1,0 +1,206 @@
+/* 
+ * JrdBuilders - Footer Override Styles
+ * This file contains styles to ensure consistent footer appearance across all pages
+ */
+
+/* Apply these styles universally to all footers */
+footer {
+    background: linear-gradient(135deg, #2c3e50 0%, #1a1a24 100%) !important;
+    color: #fff !important;
+    padding: 1.5rem 0 0.5rem !important;
+    margin-top: 0 !important;
+}
+
+.footer-modern {
+    display: flex !important;
+    flex-direction: row !important;
+    padding: 0 0 1rem !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+    align-items: flex-start !important;
+    justify-content: space-between !important;
+    flex-wrap: wrap !important;
+    gap: 1rem !important;
+}
+
+.footer-branding {
+    text-align: left !important;
+    flex: 0 0 22% !important;
+    min-width: 220px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+}
+
+.footer-branding img {
+    width: 50px !important;
+    height: 50px !important;
+    border-radius: 50% !important;
+    margin-bottom: 0.5rem !important;
+    border: 2px solid var(--primary-color) !important;
+}
+
+.footer-branding h3 {
+    font-size: 1.3rem !important;
+    margin-bottom: 0.5rem !important;
+    color: var(--primary-color) !important;
+}
+
+.footer-branding p {
+    max-width: 100% !important;
+    margin: 0 0 0.8rem !important;
+    color: rgba(255, 255, 255, 0.7) !important;
+    line-height: 1.4 !important;
+    font-size: 0.85rem !important;
+}
+
+.social-icons {
+    display: flex !important;
+    justify-content: flex-start !important;
+    gap: 8px !important;
+    margin-top: 0.3rem !important;
+}
+
+.social-icons a {
+    width: 30px !important;
+    height: 30px !important;
+    border-radius: 50% !important;
+    background-color: rgba(249, 176, 0, 0.1) !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    color: var(--primary-color) !important;
+    transition: all 0.3s ease !important;
+}
+
+.social-icons a:hover {
+    background-color: var(--primary-color) !important;
+    color: var(--dark-color) !important;
+    transform: translateY(-3px) !important;
+}
+
+.footer-nav {
+    display: flex !important;
+    flex: 1 !important;
+    justify-content: flex-end !important;
+    gap: 1.5rem !important;
+    flex-wrap: wrap !important;
+}
+
+.footer-nav-column {
+    flex: 0 0 auto !important;
+    min-width: 140px !important;
+}
+
+.footer-nav-column h4 {
+    position: relative !important;
+    font-size: 1rem !important;
+    margin-bottom: 0.8rem !important;
+    color: var(--primary-color) !important;
+    font-weight: 600 !important;
+    padding-bottom: 0.4rem !important;
+}
+
+.footer-nav-column h4::after {
+    content: '' !important;
+    position: absolute !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    width: 25px !important;
+    height: 2px !important;
+    background-color: var(--primary-color) !important;
+}
+
+.footer-nav-column ul {
+    list-style: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.footer-nav-column ul li {
+    margin-bottom: 0.4rem !important;
+}
+
+.footer-nav-column ul li a {
+    color: rgba(255, 255, 255, 0.7) !important;
+    transition: all 0.3s ease !important;
+    font-size: 0.85rem !important;
+}
+
+.footer-nav-column ul li a:hover {
+    color: var(--primary-color) !important;
+}
+
+.contact-details li {
+    display: flex !important;
+    align-items: flex-start !important;
+    gap: 0.4rem !important;
+    margin-bottom: 0.6rem !important;
+    color: rgba(255, 255, 255, 0.7) !important;
+    font-size: 0.85rem !important;
+}
+
+.contact-details li i {
+    color: var(--primary-color) !important;
+    margin-top: 0.2rem !important;
+    font-size: 0.8rem !important;
+}
+
+.footer-bottom {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    padding: 0.8rem 0 !important;
+    font-size: 0.8rem !important;
+}
+
+.legal-links {
+    display: flex !important;
+    gap: 1.2rem !important;
+}
+
+.legal-links a {
+    color: rgba(255, 255, 255, 0.6) !important;
+    text-decoration: none !important;
+    transition: all 0.3s ease !important;
+    font-size: 0.8rem !important;
+}
+
+.legal-links a:hover {
+    color: var(--primary-color) !important;
+}
+
+@media (max-width: 991.98px) {
+    .footer-modern {
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
+    }
+    
+    .footer-branding {
+        align-items: center !important;
+        text-align: center !important;
+        margin-bottom: 1.2rem !important;
+    }
+    
+    .footer-nav {
+        justify-content: center !important;
+        width: 100% !important;
+    }
+    
+    .footer-nav-column h4::after {
+        left: 50% !important;
+        transform: translateX(-50%) !important;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .footer-bottom {
+        flex-direction: column !important;
+        gap: 0.8rem !important;
+    }
+    
+    .legal-links {
+        flex-wrap: wrap !important;
+        justify-content: center !important;
+    }
+} 

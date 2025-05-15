@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ongoing Projects - JrdBuilders</title>
+    <meta name="description" content="Track the progress of JrdBuilders' current construction projects. See real-time updates, timelines, and development stages of our ongoing work.">
+    
+    <link rel="shortcut icon" href="assets/circular_logo.jpeg" type="image/x-icon" style="border-radius: 50%;">
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/ongoing.css">
+    <link rel="stylesheet" href="css/cursor.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/footer-override.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- GSAP Animation (CDN) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js" defer></script>
+</head>
+<body>
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="loader">
+            <div class="loader-inner"></div>
+        </div>
+    </div>
+    
+    <!-- Custom Cursor -->
+    <div class="custom-cursor">
+        <img src="assets/jcb-cursor.png" alt="JCB Cursor" id="cursor-img">
+        <div class="cursor-particles"></div>
+    </div>
+    
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="assets/logo.jpeg" alt="JrdBuilders Logo">
+                </a>
+                <h1>JrdBuilders</h1>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="ongoing-projects.html" class="active">Ongoing Projects</a></li>
+                    <li><a href="team.html">Our Team</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <div class="theme-toggle">
+                    <i class="fas fa-sun"></i>
+                    <i class="fas fa-moon"></i>
+                </div>
+                <div class="menu-btn">
+                    <div class="menu-btn__burger"></div>
+                </div>
+            </nav>
+        </div>
+    </header>
+    
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <ul class="mobile-nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="ongoing-projects.html" class="active">Ongoing Projects</a></li>
+            <li><a href="team.html">Our Team</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+    
+    <main>
+        <!-- Hero Section -->
+        <section class="ongoing-hero">
+            <div class="hero-content">
+                <h1 class="hero-title">Our Ongoing Projects</h1>
+                <p class="hero-subtitle">Track the progress of our current construction projects. We believe in transparency and keeping our clients informed throughout the building process.</p>
+                <a href="#progress-section" class="hero-cta">View Current Projects</a>
+            </div>
+        </section>
+        
+        <!-- Progress Section -->
+        <section id="progress-section" class="progress-section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">In Progress</span>
+                    <h2>Current Construction Projects</h2>
+                    <p>These are our active construction projects that are currently in various stages of development. Follow their progress as we transform designs into reality.</p>
+                </div>
+                
+                <div class="progress-tabs">
+                    <div class="progress-tab active" data-filter="all">All Projects</div>
+                    <div class="progress-tab" data-filter="residential">Residential</div>
+                    <div class="progress-tab" data-filter="commercial">Commercial</div>
+                    <div class="progress-tab" data-filter="industrial">Industrial</div>
+                </div>
+                
+                <div class="progress-projects">
+                    <!-- Project 1 -->
+                    <div class="progress-project" data-category="residential">
+                        <div class="project-image">
+                            <img src="assets/construction-residential-new-house-progress-building-site_293060-986.webp" alt="Lakeside Villa Project">
+                            <div class="progress-indicator">
+                                <div class="progress-bar">
+                                    <div class="progress-circle" style="--progress: 75%">
+                                        <span class="progress-percentage">75%</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="project-tag">Residential</div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Lakeside Villa Residences</h3>
+                            <p class="project-description">A premium residential complex with 12 luxury villas overlooking the lake. Each unit features smart home technology, energy-efficient systems, and private gardens.</p>
+                            <div class="project-meta">
+                                <div class="meta-item">
+                                    <i class="fas fa-map-marker-alt meta-icon"></i>
+                                    <div class="meta-info">
+                                        <span class="meta-label">Location</span>
+                                        <span class="meta-value">Lakefront Drive</span>
+                                    </div>
+                                </div>
+                                <div class="meta-item">
+                                    <i class="fas fa-calendar-alt meta-icon"></i>
+                                    <div class="meta-info">
+                                        <span class="meta-label">Completion</span>
+                                        <span class="meta-value">August 2023</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="#" class="project-btn">View Details</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Project 2 -->
+                    <div class="progress-project" data-category="commercial">
+                        <div class="project-image">
+                            <img src="assets/construction-concept-engineer-architect-working-site-with-blueprint_53876-31751.webp" alt="Urban Heights Tower">
+                            <div class="progress-indicator">
+                                <div class="progress-bar">
+                                    <div class="progress-circle" style="--progress: 40%">
+                                        <span class="progress-percentage">40%</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="project-tag">Commercial</div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Urban Heights Tower</h3>
+                            <p class="project-description">A 22-story mixed-use tower with retail spaces on the ground floor, office spaces in the middle floors, and luxury apartments at the top, featuring a rooftop garden.</p>
+                            <div class="project-meta">
+                                <div class="meta-item">
+                                    <i class="fas fa-map-marker-alt meta-icon"></i>
+                                    <div class="meta-info">
+                                        <span class="meta-label">Location</span>
+                                        <span class="meta-value">Downtown District</span>
+                                    </div>
+                                </div>
+                                <div class="meta-item">
+                                    <i class="fas fa-calendar-alt meta-icon"></i>
+                                    <div class="meta-info">
+                                        <span class="meta-label">Completion</span>
+                                        <span class="meta-value">March 2024</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="#" class="project-btn">View Details</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Project 3 -->
+                    <div class="progress-project" data-category="industrial">
+                        <div class="project-image">
+                            <img src="assets/construction-workers-working-development-construction-site_136354-8772.jpg" alt="TechPark Logistics Center">
+                            <div class="progress-indicator">
+                                <div class="progress-bar">
+                                    <div class="progress-circle" style="--progress: 65%">
+                                        <span class="progress-percentage">65%</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="project-tag">Industrial</div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">TechPark Logistics Center</h3>
+                            <p class="project-description">A state-of-the-art logistics facility spanning 50,000 sq.ft with automated storage systems, loading docks, and office spaces for management and operations.</p>
+                            <div class="project-meta">
+                                <div class="meta-item">
+                                    <i class="fas fa-map-marker-alt meta-icon"></i>
+                                    <div class="meta-info">
+                                        <span class="meta-label">Location</span>
+                                        <span class="meta-value">Industrial Zone</span>
+                                    </div>
+                                </div>
+                                <div class="meta-item">
+                                    <i class="fas fa-calendar-alt meta-icon"></i>
+                                    <div class="meta-info">
+                                        <span class="meta-label">Completion</span>
+                                        <span class="meta-value">November 2023</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="#" class="project-btn">View Details</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Project 4 -->
+                    <div class="progress-project" data-category="residential">
+                        <div class="project-image">
+                            <img src="assets/architect-showing-house-model-his-customer-office_1150-14328.webp" alt="Greenview Apartments">
+                            <div class="progress-indicator">
+                                <div class="progress-bar">
+                                    <div class="progress-circle" style="--progress: 30%">
+                                        <span class="progress-percentage">30%</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="project-tag">Residential</div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Greenview Apartments</h3>
+                            <p class="project-description">A sustainable apartment complex with 60 units, featuring green roofs, solar panels, rainwater harvesting, and energy-efficient appliances throughout.</p>
+                            <div class="project-meta">
+                                <div class="meta-item">
+                                    <i class="fas fa-map-marker-alt meta-icon"></i>
+                                    <div class="meta-info">
+                                        <span class="meta-label">Location</span>
+                                        <span class="meta-value">Westside District</span>
+                                    </div>
+                                </div>
+                                <div class="meta-item">
+                                    <i class="fas fa-calendar-alt meta-icon"></i>
+                                    <div class="meta-info">
+                                        <span class="meta-label">Completion</span>
+                                        <span class="meta-value">January 2024</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="#" class="project-btn">View Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Construction Phases Section -->
+        <section class="construction-phases">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Building Process</span>
+                    <h2>Construction Phases</h2>
+                    <p>Understanding the stages of your construction project from planning to completion</p>
+                </div>
+                
+                <div class="phases-container">
+                    <div class="phase-card">
+                        <div class="phase-number">01</div>
+                        <div class="phase-content">
+                            <div class="phase-icon">
+                                <i class="fas fa-pencil-ruler"></i>
+                            </div>
+                            <h3>Planning & Design</h3>
+                            <ul class="phase-list">
+                                <li>Site analysis and feasibility studies</li>
+                                <li>Architectural design development</li>
+                                <li>Engineering and systems planning</li>
+                                <li>Budget estimation and scheduling</li>
+                            </ul>
+                            <div class="phase-duration">
+                                <i class="far fa-clock"></i>
+                                <span>2-4 weeks</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="phase-card">
+                        <div class="phase-number">02</div>
+                        <div class="phase-content">
+                            <div class="phase-icon">
+                                <i class="fas fa-file-contract"></i>
+                            </div>
+                            <h3>Permits & Approvals</h3>
+                            <ul class="phase-list">
+                                <li>Building permit applications</li>
+                                <li>Regulatory compliance review</li>
+                                <li>Environmental assessments</li>
+                                <li>Documentation preparation</li>
+                            </ul>
+                            <div class="phase-duration">
+                                <i class="far fa-clock"></i>
+                                <span>3-6 weeks</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="phase-card">
+                        <div class="phase-number">03</div>
+                        <div class="phase-content">
+                            <div class="phase-icon">
+                                <i class="fas fa-hammer"></i>
+                            </div>
+                            <h3>Site Preparation</h3>
+                            <ul class="phase-list">
+                                <li>Land clearing and excavation</li>
+                                <li>Foundation preparation</li>
+                                <li>Utility connections setup</li>
+                                <li>Temporary facilities installation</li>
+                            </ul>
+                            <div class="phase-duration">
+                                <i class="far fa-clock"></i>
+                                <span>2-3 weeks</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="phase-card">
+                        <div class="phase-number">04</div>
+                        <div class="phase-content">
+                            <div class="phase-icon">
+                                <i class="fas fa-hard-hat"></i>
+                            </div>
+                            <h3>Foundation & Framing</h3>
+                            <ul class="phase-list">
+                                <li>Concrete foundation pouring</li>
+                                <li>Structural framing construction</li>
+                                <li>Roof and exterior wall assembly</li>
+                                <li>Quality inspections</li>
+                            </ul>
+                            <div class="phase-duration">
+                                <i class="far fa-clock"></i>
+                                <span>4-8 weeks</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="phase-card">
+                        <div class="phase-number">05</div>
+                        <div class="phase-content">
+                            <div class="phase-icon">
+                                <i class="fas fa-plug"></i>
+                            </div>
+                            <h3>Mechanical Systems</h3>
+                            <ul class="phase-list">
+                                <li>Electrical wiring installation</li>
+                                <li>Plumbing and HVAC systems</li>
+                                <li>Smart technology integration</li>
+                                <li>Safety systems setup</li>
+                            </ul>
+                            <div class="phase-duration">
+                                <i class="far fa-clock"></i>
+                                <span>3-6 weeks</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="phase-card">
+                        <div class="phase-number">06</div>
+                        <div class="phase-content">
+                            <div class="phase-icon">
+                                <i class="fas fa-paint-roller"></i>
+                            </div>
+                            <h3>Interior Finishing</h3>
+                            <ul class="phase-list">
+                                <li>Drywall and insulation</li>
+                                <li>Flooring and tiling installation</li>
+                                <li>Painting and decorative finishes</li>
+                                <li>Cabinetry and fixtures</li>
+                            </ul>
+                            <div class="phase-duration">
+                                <i class="far fa-clock"></i>
+                                <span>4-8 weeks</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="phase-card">
+                        <div class="phase-number">07</div>
+                        <div class="phase-content">
+                            <div class="phase-icon">
+                                <i class="fas fa-check-double"></i>
+                            </div>
+                            <h3>Final Inspections</h3>
+                            <ul class="phase-list">
+                                <li>Quality control assessments</li>
+                                <li>Building code compliance verification</li>
+                                <li>System functionality testing</li>
+                                <li>Final walkthrough with client</li>
+                            </ul>
+                            <div class="phase-duration">
+                                <i class="far fa-clock"></i>
+                                <span>1-2 weeks</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="phase-card">
+                        <div class="phase-number">08</div>
+                        <div class="phase-content">
+                            <div class="phase-icon">
+                                <i class="fas fa-key"></i>
+                            </div>
+                            <h3>Project Completion</h3>
+                            <ul class="phase-list">
+                                <li>Final documentation delivery</li>
+                                <li>Certificate of occupancy obtainment</li>
+                                <li>Client training on systems</li>
+                                <li>Warranty and maintenance planning</li>
+                            </ul>
+                            <div class="phase-duration">
+                                <i class="far fa-clock"></i>
+                                <span>1 week</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="phases-note">
+                    <div class="note-icon">
+                        <i class="fas fa-info-circle"></i>
+                    </div>
+                    <div class="note-content">
+                        <p>Please note that the duration of each phase can vary depending on project size, complexity, and other factors. Our team will provide you with a detailed timeline specific to your project during the consultation process.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        
+        <!-- Updates Section -->
+    
+        
+        <!-- Contact CTA Section -->
+        <section class="contact-cta">
+            <div class="container">
+                <div class="cta-content">
+                    <h2 class="cta-title">Interested in Our Projects?</h2>
+                    <p class="cta-text">Reach out to our team to learn more about our ongoing projects or to discuss your construction needs. We're ready to help bring your vision to life.</p>
+                    <div class="cta-buttons">
+                        <a href="contact.html" class="cta-btn cta-btn-primary">Contact Us</a>
+                        <a href="#" class="cta-btn cta-btn-outline">Request a Quote</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-modern">
+                <div class="footer-branding">
+                    <img src="assets/logo.jpeg" alt="JrdBuilders Logo">
+                    <h3>JrdBuilders</h3>
+                    <p>Building dreams into reality since 2010. Excellence in construction is our passion.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-nav">
+                    <div class="footer-nav-column">
+                        <h4>Quick Links</h4>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="projects.html">Projects</a></li>
+                            <li><a href="ongoing-projects.html">Ongoing Projects</a></li>
+                            <li><a href="team.html">Our Team</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-nav-column">
+                        <h4>Services</h4>
+                        <ul>
+                            <li>Residential Construction</li>
+                            <li>Commercial Buildings</li>
+                            <li>Renovations & Remodels</li>
+                            <li>Architectural Design</li>
+                            <li>Project Management</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-nav-column">
+                        <h4>Contact Info</h4>
+                        <ul class="contact-details">
+                            <li><i class="fas fa-map-marker-alt"></i> Hanuman Nagar Nai Basti, Satna, MP</li>
+                            <li><i class="fas fa-phone"></i> +91 8103249331</li>
+                            <li><i class="fas fa-envelope"></i>saurabhkushwaha9853@gmail.com</li>
+                            <li><i class="fas fa-clock"></i> Mon-Fri: 8:00 AM - 10:00 PM</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2023 JrdBuilders. All Rights Reserved.</p>
+                <div class="legal-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Back to Top Button -->
+    <div class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+    
+    <!-- JS Files -->
+    <script src="js/main.js"></script>
+    <script src="js/cursor.js"></script>
+    <script src="js/ongoing.js"></script>
+</body>
+</html> 

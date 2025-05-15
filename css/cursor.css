@@ -1,0 +1,396 @@
+/* 
+ * JrdBuilders - Custom Cursor Styles
+ * This file contains styles for the JCB bulldozer cursor and cursor effects
+ */
+
+/* Custom cursor container */
+.custom-cursor {
+    position: fixed;
+    width: 0;
+    height: 0;
+    pointer-events: none;
+    z-index: 9999 !important;
+    transform: translate(-50%, -50%);
+    opacity: 1 !important;
+    transition: opacity 0.3s ease;
+    display: block !important; /* Ensure cursor is always visible */
+    visibility: visible !important;
+    mix-blend-mode: normal;
+    left: 50%;
+    top: 50%;
+}
+
+/* Cursor image */
+#cursor-img {
+    position: absolute;
+    width: 50px; /* Set fixed width */
+    height: 50px; /* Set fixed height */
+    object-fit: contain;
+    transform: translate(-50%, -50%);
+    display: block !important; /* Always show cursor image */
+    visibility: visible !important;
+    opacity: 1 !important;
+    background-color: transparent !important;
+    z-index: 9999;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3)); /* Add subtle shadow */
+    pointer-events: none; /* Ensure it doesn't interfere with interactions */
+    will-change: transform;
+    top: 0;
+    left: 0;
+    transform-origin: center center;
+    max-width: none; /* Prevent image from being resized by other styles */
+    max-height: none; /* Prevent image from being resized by other styles */
+    min-width: 50px; /* Ensure minimum size */
+    min-height: 50px; /* Ensure minimum size */
+}
+
+/* Cursor follower */
+.cursor-follower {
+    position: absolute;
+    width: 45px;
+    height: 45px;
+    background-color: rgba(255, 204, 0, 0.08);
+    border: 1px solid rgba(255, 204, 0, 0.3);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.3s, height 0.3s;
+    pointer-events: none;
+    z-index: 9990; /* Below the cursor image */
+    display: block !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    will-change: transform;
+    top: 0;
+    left: 0;
+}
+
+/* Media queries for cursor behavior on devices with hover capability */
+@media (hover: hover) and (pointer: fine) {
+    body {
+        cursor: none !important; /* Hide default cursor on desktop */
+    }
+    
+    a, button, .btn, [role="button"], input, select, textarea, label, 
+    .category-tab, .project-card, .team-member, .service-card, .theme-toggle, 
+    .mobile-menu-icon, .project-item, .contact-form input, .contact-form textarea {
+        cursor: none !important; /* Ensure all interactive elements use the custom cursor */
+    }
+}
+
+/* Handle touch devices appropriately */
+@media (hover: none) or (pointer: coarse) {
+    .custom-cursor {
+        display: none !important; /* Hide custom cursor on touch devices */
+    }
+    
+    body {
+        cursor: auto !important; /* Use default cursor on touch devices */
+    }
+    
+    a, button, .btn, [role="button"], input, select, textarea, label, 
+    .category-tab, .project-card, .team-member, .service-card, .theme-toggle, 
+    .mobile-menu-icon, .project-item, .contact-form input, .contact-form textarea {
+        cursor: auto !important; /* Use default cursor for interactive elements on touch devices */
+    }
+}
+
+/* Cursor dot - actual cursor position */
+.cursor-dot {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 6px;
+    height: 6px;
+    background-color: rgba(255, 204, 0, 0.8);
+    border-radius: 50%;
+    box-shadow: 0 0 5px rgba(249, 176, 0, 0.5);
+    transform: translate(-50%, -50%);
+    will-change: transform;
+    z-index: 10000;
+    pointer-events: none;
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+/* Cursor particles container */
+.cursor-particles {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* Scale cursor on interactive elements */
+.custom-cursor.cursor-active #cursor-img {
+    transform: translate(-50%, -50%) scale(1.2);
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3)) brightness(1.2);
+}
+
+.custom-cursor.cursor-active .cursor-follower {
+    width: 60px;
+    height: 60px;
+    background-color: rgba(255, 204, 0, 0.15);
+    border-color: rgba(255, 204, 0, 0.4);
+}
+
+.custom-cursor.cursor-active .cursor-dot {
+    transform: translate(-50%, -50%) scale(1.5);
+    background-color: rgba(255, 204, 0, 1);
+}
+
+.custom-cursor.cursor-click #cursor-img {
+    transform: translate(-50%, -50%) scale(0.9);
+    filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.4)) brightness(0.95);
+}
+
+.custom-cursor.cursor-click .cursor-follower {
+    width: 50px;
+    height: 50px;
+    background-color: rgba(255, 204, 0, 0.3);
+    border-color: rgba(255, 204, 0, 0.8);
+    transition: all 0.1s ease;
+}
+
+.custom-cursor.cursor-click .cursor-dot {
+    transform: translate(-50%, -50%) scale(0.8);
+    background-color: rgba(255, 140, 0, 1);
+    transition: all 0.1s ease;
+}
+
+/* Cursor wheel animation */
+.custom-cursor.moving #cursor-img {
+    animation: jcbMovement 0.5s linear infinite;
+}
+
+@keyframes jcbMovement {
+    0% {
+        transform: translate(-50%, -50%) rotate(-2deg);
+    }
+    50% {
+        transform: translate(-50%, -50%) rotate(2deg);
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(-2deg);
+    }
+}
+
+/* Individual particle for dust effect */
+.dust-particle {
+    position: absolute;
+    background-color: var(--light-gray);
+    border-radius: 50%;
+    width: 5px;
+    height: 5px;
+    opacity: 0.6;
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* Click effect - ripple */
+.cursor-splash {
+    position: fixed;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background-color: rgba(249, 176, 0, 0.3);
+    transform: translate(-50%, -50%);
+    animation: rippleEffect 0.8s linear;
+    pointer-events: none;
+    z-index: var(--z-tooltip);
+}
+
+@keyframes rippleEffect {
+    0% {
+        width: 0;
+        height: 0;
+        opacity: 0.5;
+    }
+    100% {
+        width: 100px;
+        height: 100px;
+        opacity: 0;
+    }
+}
+
+/* Construction dust particle effect */
+.dust-particle {
+    position: fixed;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background-color: #d9d9d9;
+    pointer-events: none;
+    z-index: var(--z-normal);
+    opacity: 0.8;
+    animation: dustFall 1s linear forwards;
+}
+
+@keyframes dustFall {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0.8;
+    }
+    100% {
+        transform: translateY(50px) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* Media queries for responsive cursor */
+@media (max-width: 991.98px) {
+    .custom-cursor {
+        width: 50px;
+        height: 50px;
+    }
+    
+    #cursor-img {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .cursor-follower {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .cursor-dot {
+        width: 5px;
+        height: 5px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .custom-cursor {
+        width: 40px;
+        height: 40px;
+    }
+    
+    #cursor-img {
+        width: 35px;
+        height: 35px;
+    }
+    
+    .cursor-follower {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .cursor-dot {
+        width: 4px;
+        height: 4px;
+    }
+}
+
+/* Cursor effects for different contexts */
+/* Hover effects */
+.custom-cursor.btn-hover .cursor-follower {
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3)) brightness(1.3);
+}
+
+.custom-cursor.btn-hover .cursor-dot {
+    background-color: #ff9900;
+    box-shadow: 0 0 15px rgba(249, 176, 0, 0.8);
+}
+
+.custom-cursor.link-hover .cursor-follower {
+    transform: translate(-50%, -50%) scale(1.1) rotate(-5deg);
+}
+
+.custom-cursor.card-hover .cursor-follower {
+    transform: translate(-50%, -50%) scale(1.3);
+}
+
+/* Area-specific cursor effects */
+/* Projects section - bulldozer with hammer */
+.custom-cursor.projects-area .cursor-follower {
+    filter: drop-shadow(0 0 8px var(--primary-color));
+}
+
+.custom-cursor.projects-area .cursor-dot {
+    background-color: #ff9900;
+}
+
+/* Team section - bulldozer with hardhat */
+.custom-cursor.team-area .cursor-follower {
+    filter: hue-rotate(30deg) drop-shadow(0 0 8px var(--primary-color));
+}
+
+.custom-cursor.team-area .cursor-dot {
+    background-color: #33cc99;
+}
+
+/* Contact section - bulldozer with phone */
+.custom-cursor.contact-area .cursor-follower {
+    filter: hue-rotate(-30deg) drop-shadow(0 0 8px var(--primary-color));
+}
+
+.custom-cursor.contact-area .cursor-dot {
+    background-color: #3399ff;
+}
+
+/* Sparkle effect for testimonials */
+.sparkle {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: transparent;
+    pointer-events: none;
+    z-index: var(--z-tooltip);
+}
+
+.sparkle::before, .sparkle::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+}
+
+.sparkle::before {
+    animation: sparklePulse 1s ease-in-out infinite;
+}
+
+.sparkle::after {
+    animation: sparklePulse 1s ease-in-out 0.3s infinite;
+}
+
+@keyframes sparklePulse {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(2);
+        opacity: 0;
+    }
+}
+
+/* Cursor trail effect */
+.cursor-trail {
+    position: fixed;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    opacity: 0;
+    pointer-events: none;
+    z-index: var(--z-normal);
+    animation: trailFade 0.5s linear forwards;
+}
+
+@keyframes trailFade {
+    0% {
+        opacity: 0.7;
+    }
+    100% {
+        opacity: 0;
+    }
+} 

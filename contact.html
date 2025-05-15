@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - JrdBuilders</title>
+    <meta name="description" content="Get in touch with JrdBuilders for inquiries about construction projects, services, or career opportunities. We're ready to help with your construction needs.">
+    
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="assets/circular_logo.jpeg" type="image/x-icon" style="border-radius: 50%;">
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="css/cursor.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/footer-override.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- GSAP Animation (CDN) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js" defer></script>
+</head>
+<body>
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="loader">
+            <div class="loader-inner"></div>
+        </div>
+    </div>
+    
+    <!-- Custom Cursor -->
+    <div class="custom-cursor">
+        <img src="assets/jcb-cursor.png" alt="JCB Cursor" id="cursor-img">
+        <div class="cursor-particles"></div>
+    </div>
+    
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="assets/logo.jpeg" alt="JrdBuilders Logo">
+                </a>
+                <h1>JrdBuilders</h1>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="ongoing-projects.html">Ongoing Projects</a></li>
+                    <li><a href="team.html">Our Team</a></li>
+                    <li><a href="contact.html" class="active">Contact</a></li>
+                </ul>
+                <div class="theme-toggle">
+                    <i class="fas fa-sun"></i>
+                    <i class="fas fa-moon"></i>
+                </div>
+                <div class="menu-btn">
+                    <div class="menu-btn__burger"></div>
+                </div>
+            </nav>
+        </div>
+    </header>
+    
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <ul class="mobile-nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="ongoing-projects.html">Ongoing Projects</a></li>
+            <li><a href="team.html">Our Team</a></li>
+            <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+    </div>
+    
+    <main>
+        <!-- Contact Hero Section -->
+        <section class="contact-hero">
+            <div class="hero-content">
+                <h1 class="hero-title">Get In Touch</h1>
+                <p class="hero-subtitle">Have questions about our services or interested in starting a project? We're here to help. Reach out to our team and we'll respond promptly to your inquiry.</p>
+                <div class="contact-options">
+                    <div class="contact-option">
+                        <div class="option-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="option-label">Phone</div>
+                        <div class="option-value">+91 8103249331</div>
+                    </div>
+                    <div class="contact-option">
+                        <div class="option-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="option-label">Email</div>
+                        <div class="option-value">saurabhkushwaha9853@gmail.com</div>
+                    </div>
+                    <div class="contact-option">
+                        <div class="option-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="option-label">Office</div>
+                        <div class="option-value">Hanuman Nagar Nai Basti, Satna, MP</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Contact Form Section -->
+        <section class="contact-form-section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Contact Us</span>
+                    <h2>How Can We Help You?</h2>
+                    <p>Whether you're looking to start a new construction project, have questions about our services, or are interested in a career at JrdBuilders, we're here to assist you.</p>
+                </div>
+                
+                <div class="contact-container">
+                    <div class="contact-info">
+                        <h3 class="info-title">Let's Discuss Your Project</h3>
+                        <p class="info-text">At JrdBuilders, we're committed to bringing your construction vision to life. Our team of experts is ready to discuss your project requirements and provide personalized solutions.</p>
+                        
+                        <ul class="contact-info-list">
+                            <li>
+                                <i class="fas fa-phone"></i>
+                                <div>
+                                    <span class="info-label">Phone</span>
+                                    <span>+91 8103249331</span>
+                                </div>
+                            </li>
+                            <li>
+                                <i class="fas fa-envelope"></i>
+                                <div>
+                                    <span class="info-label">Email</span>
+                                    <span>saurabhkushwaha9853@gmail.com</span>
+                                </div>
+                            </li>
+                            <li>
+                                <i class="fas fa-clock"></i>
+                                <div>
+                                    <span class="info-label">Working Hours</span>
+                                    <span>Mon-Fri: 8:00 AM - 10:00 PM</span>
+                                </div>
+                            </li>
+                            <li>
+                                <i class="fas fa-map-marker-alt"></i>
+                                <div>
+                                    <span class="info-label">Address</span>
+                                    <span>Hanuman Nagar Nai Basti, Satna, MP</span>
+                                </div>
+                            </li>
+                        </ul>
+                        
+                        <div class="social-links">
+                            <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-form">
+                        <div class="form-header">
+                            <h3>Send Us a Message</h3>
+                            <p>Fill out the form below and we'll get back to you within 24 hours.</p>
+                        </div>
+                        
+                        <form id="contactForm" action="#" method="post">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="name">Full Name</label>
+                                    <input type="text" class="form-control" id="name" name="name" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Email Address</label>
+                                    <input type="email" class="form-control" id="email" name="email" required>
+                                </div>
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="phone">Phone Number</label>
+                                    <input type="tel" class="form-control" id="phone" name="phone">
+                                </div>
+                                <div class="form-group">
+                                    <label for="subject">Subject</label>
+                                    <select class="form-control" id="subject" name="subject" required>
+                                        <option value="" selected disabled>Select a subject</option>
+                                        <option value="General Inquiry">General Inquiry</option>
+                                        <option value="Project Quote">Project Quote</option>
+                                        <option value="Career Opportunity">Career Opportunity</option>
+                                        <option value="Feedback">Feedback</option>
+                                        <option value="Other">Other</option>
+                                    </select>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="message">Your Message</label>
+                                <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+                            </div>
+                            
+                            <button type="submit" class="submit-btn">Send Message <i class="fas fa-paper-plane"></i></button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Map Section -->
+        <section class="map-section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Our Location</span>
+                    <h2>Visit Our Office</h2>
+                    <p>We're conveniently located in the heart of the city. Drop by our office to meet our team and discuss your project in person.</p>
+                </div>
+                
+                <div class="map-container">
+                    <div class="map-content">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3232.2036556942382!2d-95.49071148524057!3d29.7413479822!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjnCsDQ0JzI4LjUiTiA5NcKwMjknMTkuMiJX!5e0!3m2!1sen!2sus!4v1621521320401!5m2!1sen!2sus" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                    <div class="map-sidebar">
+                        <div class="address-card">
+                            <div class="card-header">
+                                <h3>Main Office</h3>
+                                <div class="card-icon">
+                                    <i class="fas fa-building"></i>
+                                </div>
+                            </div>
+                            <ul class="address-details">
+                                <li>
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <span>Hanuman Nagar Nai Basti, Satna, MP</span>
+                                </li>
+                                <li>
+                                    <i class="fas fa-phone"></i>
+                                    <span>+91 8103249331</span>
+                                </li>
+                                <li>
+                                    <i class="fas fa-envelope"></i>
+                                    <span>saurabhkushwaha9853@gmail.com</span>
+                                </li>
+                                <li>
+                                    <i class="fas fa-clock"></i>
+                                    <span>Mon-Fri: 8:00 AM - 10:00 PM</span>
+                                </li>
+                            </ul>
+                            <div class="card-actions">
+                                <a href="https://maps.google.com/?q=123+Construction+Avenue,+City,+State+12345" target="_blank" class="btn-outline">Get Directions</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-modern">
+                <div class="footer-branding">
+                    <img src="assets/logo.jpeg" alt="JrdBuilders Logo">
+                    <h3>JrdBuilders</h3>
+                    <p>Building dreams into reality since 2010. Excellence in construction is our passion.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-nav">
+                    <div class="footer-nav-column">
+                        <h4>Quick Links</h4>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="projects.html">Projects</a></li>
+                            <li><a href="ongoing-projects.html">Ongoing Projects</a></li>
+                            <li><a href="team.html">Our Team</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-nav-column">
+                        <h4>Services</h4>
+                        <ul>
+                            <li>Residential Construction</li>
+                            <li>Commercial Buildings</li>
+                            <li>Renovations & Remodels</li>
+                            <li>Architectural Design</li>
+                            <li>Project Management</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-nav-column">
+                        <h4>Contact Info</h4>
+                        <ul class="contact-details">
+                            <li><i class="fas fa-map-marker-alt"></i> Hanuman Nagar Nai Basti, Satna, MP</li>
+                            <li><i class="fas fa-phone"></i> +91 8103249331</li>
+                            <li><i class="fas fa-envelope"></i>saurabhkushwaha9853@gmail.com</li>
+                            <li><i class="fas fa-clock"></i> Mon-Fri: 8:00 AM - 10:00 PM</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2023 JrdBuilders. All Rights Reserved.</p>
+                <div class="legal-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Back to Top Button -->
+    <div class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+    
+    <!-- JS Files -->
+    <script src="js/main.js"></script>
+    <script src="js/cursor.js"></script>
+    <script src="js/contact.js"></script>
+</body>
+</html> 

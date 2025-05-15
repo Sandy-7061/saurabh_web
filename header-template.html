@@ -1,0 +1,55 @@
+<!-- Header Template - To be included in all pages -->
+<header>
+    <div class="header-container">
+        <div class="logo">
+            <a href="index.html">
+                <img src="assets/logo.jpeg" alt="JrdBuilders Logo">
+            </a>
+            <h1>JrdBuilders</h1>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html" id="nav-home">Home</a></li>
+                <li><a href="projects.html" id="nav-projects">Projects</a></li>
+                <li><a href="ongoing-projects.html" id="nav-ongoing">Ongoing Projects</a></li>
+                <li><a href="team.html" id="nav-team">Our Team</a></li>
+                <li><a href="contact.html" id="nav-contact">Contact</a></li>
+            </ul>
+            <div class="theme-toggle">
+                <i class="fas fa-sun"></i>
+                <i class="fas fa-moon"></i>
+            </div>
+            <div class="mobile-menu-icon">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </nav>
+    </div>
+</header>
+
+<!-- Mobile Menu -->
+<div class="mobile-menu">
+    <ul>
+        <li><a href="index.html" id="mobile-nav-home">Home</a></li>
+        <li><a href="projects.html" id="mobile-nav-projects">Projects</a></li>
+        <li><a href="ongoing-projects.html" id="mobile-nav-ongoing">Ongoing Projects</a></li>
+        <li><a href="team.html" id="mobile-nav-team">Our Team</a></li>
+        <li><a href="contact.html" id="mobile-nav-contact">Contact</a></li>
+    </ul>
+</div>
+
+<script>
+// Set active navigation item based on current page
+document.addEventListener('DOMContentLoaded', function() {
+    const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+    
+    // Set active class for main navigation
+    const mainNavItem = document.getElementById(`nav-${currentPage.split('.')[0]}`);
+    if (mainNavItem) mainNavItem.classList.add('active');
+    
+    // Set active class for mobile navigation
+    const mobileNavItem = document.getElementById(`mobile-nav-${currentPage.split('.')[0]}`);
+    if (mobileNavItem) mobileNavItem.classList.add('active');
+});
+</script> 

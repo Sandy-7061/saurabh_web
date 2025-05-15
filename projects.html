@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Projects - JrdBuilders</title>
+    <meta name="description" content="Explore JrdBuilders' portfolio of completed residential and commercial construction projects">
+    
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="assets/circular_logo.jpeg" type="image/x-icon" style="border-radius: 50%;">
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/projects.css">
+    <link rel="stylesheet" href="css/cursor.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/footer-override.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Three.js for 3D elements -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.min.js"></script>
+</head>
+<body>
+    <!-- Custom Cursor -->
+    <div class="custom-cursor">
+        <img src="assets/jcb-cursor.png" alt="JCB Cursor" id="cursor-img">
+        <div class="cursor-particles"></div>
+    </div>
+    
+    <!-- Include Header Template -->
+    <div id="header-container"></div>
+    
+    <!-- Full-screen 3D Hero Section -->
+    <section class="fullscreen-hero">
+        <div id="hero-3d-container" class="hero-3d-fullscreen"></div>
+        <div class="hero-overlay">
+            <div class="hero-content">
+                <h1 class="animated-title">Our Construction Masterpieces</h1>
+                <p class="animated-subtitle">Discover our portfolio of exceptional projects that transform visions into reality</p>
+                <div class="hero-scroll-indicator">
+                    <span>Scroll to Explore</span>
+                    <i class="fas fa-chevron-down pulse"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Project Categories Section -->
+    <section class="project-categories">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Our Portfolio</span>
+                <h2>Building Excellence Across Categories</h2>
+                <p>Explore our diverse range of construction projects spanning multiple industries and sectors</p>
+            </div>
+            
+            <div class="categories-wrapper">
+                <div class="category-tabs">
+                    <button class="category-tab active" data-filter="all">
+                        <i class="fas fa-border-all"></i>
+                        <span>All Projects</span>
+                    </button>
+                    <button class="category-tab" data-filter="residential">
+                        <i class="fas fa-home"></i>
+                        <span>Residential</span>
+                    </button>
+                    <button class="category-tab" data-filter="commercial">
+                        <i class="fas fa-building"></i>
+                        <span>Commercial</span>
+                    </button>
+                    <button class="category-tab" data-filter="industrial">
+                        <i class="fas fa-industry"></i>
+                        <span>Industrial</span>
+                    </button>
+                    <button class="category-tab" data-filter="renovation">
+                        <i class="fas fa-tools"></i>
+                        <span>Renovation</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Projects Showcase -->
+    <section class="projects-showcase">
+        <div class="container">
+            <div class="projects-grid" id="projects-grid">
+                <!-- Project items will be dynamically generated here -->
+            </div>
+            <div class="projects-empty" style="display: none;">
+                <div class="empty-state">
+                    <i class="fas fa-search"></i>
+                    <h3>No projects found</h3>
+                    <p>Try adjusting your filter criteria</p>
+                    <button class="reset-btn" id="reset-filters">Reset Filters</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Client Testimonials -->
+    <section class="project-testimonials">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Client Feedback</span>
+                <h2>What Our Clients Say</h2>
+                <p>Discover why our clients trust us with their construction projects</p>
+            </div>
+            
+            <div class="testimonials-slider">
+                <div class="testimonials-wrapper" id="testimonials-wrapper">
+                    <!-- Testimonials will be dynamically generated here -->
+                </div>
+                <div class="slider-navigation">
+                    <button class="slider-nav prev" id="testimonial-prev"><i class="fas fa-arrow-left"></i></button>
+                    <div class="slider-dots" id="testimonial-dots"></div>
+                    <button class="slider-nav next" id="testimonial-next"><i class="fas fa-arrow-right"></i></button>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Project CTA -->
+    <section class="project-cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Start Your Project?</h2>
+                <p>Let's transform your vision into reality with our expert construction services</p>
+                <div class="cta-buttons">
+                    <a href="contact.html" class="btn-primary">Contact Us</a>
+                    <a href="ongoing-projects.html" class="btn-outline">View Ongoing Projects</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Project Details Modal -->
+    <div class="project-modal" id="project-modal">
+        <div class="modal-overlay"></div>
+        <div class="modal-container">
+            <button class="modal-close" id="modal-close"><i class="fas fa-times"></i></button>
+            <div class="modal-content" id="modal-content">
+                <!-- Modal content will be loaded dynamically using JavaScript -->
+            </div>
+        </div>
+    </div>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-modern">
+                <div class="footer-branding">
+                    <img src="assets/logo.jpeg" alt="JrdBuilders Logo">
+                    <h3>JrdBuilders</h3>
+                    <p>Building dreams into reality since 2010. Excellence in construction is our passion.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-nav">
+                    <div class="footer-nav-column">
+                        <h4>Quick Links</h4>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="projects.html">Projects</a></li>
+                            <li><a href="ongoing-projects.html">Ongoing Projects</a></li>
+                            <li><a href="team.html">Our Team</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-nav-column">
+                        <h4>Services</h4>
+                        <ul>
+                            <li>Residential Construction</li>
+                            <li>Commercial Buildings</li>
+                            <li>Renovations & Remodels</li>
+                            <li>Architectural Design</li>
+                            <li>Project Management</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-nav-column">
+                        <h4>Contact Info</h4>
+                        <ul class="contact-details">
+                            <li><i class="fas fa-map-marker-alt"></i> Hanuman Nagar Nai Basti, Satna, MP</li>
+                            <li><i class="fas fa-phone"></i> +91 8103249331</li>
+                            <li><i class="fas fa-envelope"></i>saurabhkushwaha9853@gmail.com</li>
+                            <li><i class="fas fa-clock"></i> Mon-Fri: 8:00 AM - 10:00 PM</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2023 JrdBuilders. All Rights Reserved.</p>
+                <div class="legal-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+    
+    <!-- External JS Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+    
+    <!-- Custom JS Files -->
+    <script src="js/main.js"></script>
+    <script src="js/cursor.js"></script>
+    <script src="js/projects.js"></script>
+    <script>
+        // Load the header template
+        document.addEventListener('DOMContentLoaded', function() {
+            fetch('header-template.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('header-container').innerHTML = data;
+                    
+                    // Set active nav item
+                    const navProjects = document.getElementById('nav-projects');
+                    if (navProjects) navProjects.classList.add('active');
+                    
+                    const mobileNavProjects = document.getElementById('mobile-nav-projects');
+                    if (mobileNavProjects) mobileNavProjects.classList.add('active');
+                });
+        });
+    </script>
+</body>
+</html> 
