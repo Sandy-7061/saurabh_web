@@ -1,5 +1,5 @@
 /**
- * Contact.js - JrdBuilders Contact Page Scripts
+ * Contact.js - JRD Constructions & Builders Contact Page Scripts
  * Contains functionality for the contact page including form validation,
  * FAQ accordion, and map interaction
  */

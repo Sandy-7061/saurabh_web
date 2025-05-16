@@ -213,7 +213,7 @@ function initProjectsModal() {
                 </div>
                 <div class="project-description">
                     <h3>Project Overview</h3>
-                    <p>This ${projectType} is currently in progress with an overall completion rate of ${projectProgress}. The project is being executed with the highest standards of quality and craftsmanship that JrdBuilders is known for.</p>
+                    <p>This ${projectType} is currently in progress with an overall completion rate of ${projectProgress}. The project is being executed with the highest standards of quality and craftsmanship that JRD Constructions & Builders is known for.</p>
                     <h3>Current Stage</h3>
                     <div class="project-timeline-container"></div>
                     <h3>Upcoming Milestones</h3>

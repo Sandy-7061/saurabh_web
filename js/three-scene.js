@@ -861,7 +861,7 @@ function initMapScene() {
         // Company building is special and stands out
         const buildingGeometry = new THREE.BoxGeometry(6, 8, 6);
         const buildingMaterial = new THREE.MeshStandardMaterial({ 
-            color: 0xFFCC00, // JrdBuilders yellow
+            color: 0xFFCC00, // JRD Constructions & Builders yellow
             roughness: 0.5,
             metalness: 0.2
         });

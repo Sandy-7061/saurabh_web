@@ -1,5 +1,5 @@
 /**
- * Main.js - Core functionality for JrdBuilders website
+ * Main.js - Core functionality for JRD Constructions & Builders website
  * Includes navigation, theme toggle, loading animation, and shared utilities
  */
 

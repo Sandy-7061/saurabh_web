@@ -21,7 +21,7 @@ function sendEmail(formData) {
     };
 
     // EmailJS service information
-    const serviceID = 'service_jrdbuilders'; // Replace with your EmailJS service ID
+    const serviceID = 'service_JRD Constructions & Builders'; // Replace with your EmailJS service ID
     const templateID = 'template_contact_form'; // Replace with your EmailJS template ID
     
     // Send the email
@@ -59,7 +59,7 @@ function createMailtoLink(formData) {
         return null;
     }
     
-    const subject = `Contact Request from ${formData.name} - JrdBuilders`;
+    const subject = `Contact Request from ${formData.name} - JRD Constructions & Builders`;
     const body = `
 Name: ${formData.name}
 Email: ${formData.email}
@@ -70,7 +70,7 @@ Message:
 ${formData.message}
     `;
     
-    return `mailto:info@jrdbuilders.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    return `mailto:info@JRD Constructions & Builders.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 }
 
 // Fallback function if EmailJS fails

@@ -55,10 +55,10 @@ function initLoginForm() {
                     
                     // Store login state if remember me is checked
                     if (rememberMe) {
-                        localStorage.setItem('jrdbuilders_email', email);
-                        localStorage.setItem('jrdbuilders_logged_in', 'true');
+                        localStorage.setItem('JRD Constructions & Builders_email', email);
+                        localStorage.setItem('JRD Constructions & Builders_logged_in', 'true');
                     } else {
-                        sessionStorage.setItem('jrdbuilders_logged_in', 'true');
+                        sessionStorage.setItem('JRD Constructions & Builders_logged_in', 'true');
                     }
                     
                     // Redirect to dashboard after delay
@@ -315,7 +315,7 @@ function simulateApiCall(action, data) {
             switch (action) {
                 case 'login':
                     // Demo login logic - in a real app, this would call a backend API
-                    if (data.email === 'admin@jrdbuilders.com' && data.password === 'admin123') {
+                    if (data.email === 'admin@JRD Constructions & Builders.com' && data.password === 'admin123') {
                         resolve({ success: true, user: { name: 'Admin User' } });
                     } else if (data.email === 'demo@example.com' && data.password === 'password') {
                         resolve({ success: true, user: { name: 'Demo User' } });
@@ -326,7 +326,7 @@ function simulateApiCall(action, data) {
                     
                 case 'signup':
                     // Demo signup logic
-                    if (data.email === 'admin@jrdbuilders.com') {
+                    if (data.email === 'admin@JRD Constructions & Builders.com') {
                         reject(new Error('Email is already in use.'));
                     } else {
                         resolve({ success: true });

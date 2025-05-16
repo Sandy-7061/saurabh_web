@@ -1,5 +1,5 @@
 /**
- * Team.js - JrdBuilders Team Page Scripts
+ * Team.js - JRD Constructions & Builders Team Page Scripts
  * Contains functionality for the team page including department tabs, animations,
  * and other interactive elements
  */

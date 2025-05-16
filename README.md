@@ -1,6 +1,6 @@
-# JrdBuilders Website
+# JRD Constructions & Builders Website
 
-A modern, responsive, and interactive website for JrdBuilders construction company, featuring 3D animations, custom cursor effects, and more.
+A modern, responsive, and interactive website for JRD Constructions & Builders construction company, featuring 3D animations, custom cursor effects, and more.
 
 ## Features
 
